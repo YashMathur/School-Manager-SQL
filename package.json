@@ -1,0 +1,14 @@
+{
+  "name": "school",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "start": "electron ."
+  },
+  "author": "Yash Mathur",
+  "license": "MIT",
+  "devDependencies": {
+    "electron-prebuilt": "^0.37.2"
+  }
+}

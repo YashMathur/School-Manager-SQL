@@ -1,0 +1,222 @@
+body{
+  background: #FFF;
+  margin: 0;
+}
+.main{
+  display: none;
+}
+li{
+  list-style-type: none;
+  padding: 5px;
+  background: #4CAF50;
+  color: #FFF;
+  border-top: 0;
+  cursor: pointer;
+  font-size: 18px;
+  font-family: 'lucida grande', tahoma, verdana, arial, sans-serif;
+}
+li:hover{
+  background: #FFF;
+  color: #000;
+}
+ul{
+  margin-top: 3px;
+  background: #4CAF50;
+  padding: 5px;
+  height: 100%;
+  z-index: 100;
+}
+.main-page{
+  overflow: auto;
+  width: 100%;
+}
+.left-menu{
+  position: fixed;
+  float: left;
+  overflow: hidden;
+  width: 20%;
+  left: -20%;
+  height: 100%;
+  top: 30px;
+  z-index: 100;
+}
+#showmenu{
+  float: left;
+  position: fixed;
+  top: 30px;
+  z-index: 100;
+  left: 0%;
+  cursor: pointer;
+}
+.menu-bar{
+  top: 30px;
+  background: #4CAF50;
+  padding: 0;
+  padding-top: 4px;
+  padding-bottom: 4px;
+  position: fixed;
+  width: 100%;
+}
+.teacher-name{
+  float: right;
+  font-size: 25px;
+}
+.close{
+  float:right;
+  margin-top:0;
+  z-index: 3;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center center;
+  color: transparent;
+  cursor: default;
+  width: 18px;
+  padding: 4px;
+}
+.close:hover, .minimize:hover{
+  background: #000;
+  cursor: pointer;
+}
+.minimize{
+  float: right;
+  margin-top: 0;
+  z-index: 3;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center center;
+  color: transparent;
+  cursor: default;
+  width: 18px;
+  padding: 4px;
+}
+.void{
+  display: none;
+}
+.classes{
+  width: 80%;
+  margin-top: 6%;
+}
+#report-cards{
+  width: 80%;
+  margin-top: 6%;
+  display: none;
+}
+.stud{
+  border: 1px solid #BDBDBD;
+}
+.stud td, th{
+  padding: 5px;
+}
+.stud tr:nth-child(even){
+  background: #DBDBDB;
+}
+.showdata{
+  cursor:pointer;
+}
+.cl{
+  padding: 5px;
+  border: 1px solid #E0E0E0;
+}
+.classadd{
+  overflow: auto;
+}
+.class-title{
+  font-size: 22px;
+  font-weight: bolder;
+}
+.control{
+  padding: 5px;
+  cursor: pointer;
+  background: #4CAF50;
+  color: #FFF;
+  border: 0;
+  outline: 0;
+}
+.control:hover{
+  color: #4CAF50;
+  background: #FFF;
+}
+
+td.name{
+  width: 150px;
+}
+
+td#marks{
+  width: 50px;
+}
+#tint{
+  height: 100%;
+  width: 100%;
+  position: fixed;
+  z-index: 1;
+  left: 0;
+  top: 0;
+  background-color: #000;
+  opacity: 0.7;
+  overflow-x: hidden;
+  transition: 0.5s;
+  display: none;
+}
+input[type=text], input[type=password], input[type=date]{
+  padding: 3px;
+  border: 1px solid #CCC;
+  border-radius: 2px;
+}
+#student-add-edit, #teacher-addedit{
+  display:none;
+}
+#l, #create-teacher-but{
+  padding: 6px;
+  border-radius: 2px;
+  border: 1px solid #CCC;
+  background: #FFF;
+  cursor: pointer;
+}
+#l:hover, #create-teacher-but:hover{
+  background: #CCC;
+  border-color: #BABABA;
+}
+.popup{
+  position: absolute;
+  top: 25%;
+  width: 70%;
+  left: 0;
+  right: 0;
+  margin-top: 30px;
+  background: #FFF;
+  color: #000;
+  border: 1px solid #FFF;
+  border-radius: 10px;
+  z-index: 2;
+  padding: 10px;
+  margin: 0 auto;
+  display: none;
+}
+.multi-cl{
+  padding: 3px;
+  background: #ADFFB0;
+}
+.multi-cl:hover{
+  cursor: pointer;
+  background: #82FF86;
+}
+select{
+  padding: 4px;
+  border: 1px solid #CCC;
+  border-radius: 2px;
+}
+h2{
+  margin-bottom: 4px;
+}
+.title-bar{
+  background: #454545;
+  width: 100%;
+  height: 30px;
+  overflow: auto;
+  position: fixed;
+  top: 0;
+  padding-top: 3px;
+}
+.login-show{
+  margin-top: 5%;
+}

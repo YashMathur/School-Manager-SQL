@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <link href="main.css" rel="stylesheet" type="text/css" />
+    <link href="jui.css" rel="stylesheet">
+  </head>
+  <body>
+    <div id='tint'>
+    </div>
+    <input type="hidden" id="teach-id" value="">
+    <div class='title-bar' id='title-bar'>
+      <center style='position:absolute;left:0;right:0;font-size:26px;color:#FFF;z-index:-1;cursor:default'>AECS Magnolia</center>
+      <span class='close' id='close'><img src="close.png" height="18" width="18" /></span>
+      <span class='minimize' id='minimize'><img src="minimize.png" height="18" width="18" /></span>
+    </div>
+    <center class='login-show'>
+      <h1>Login</h1>
+      <table border=0>
+        <tr><td>Username</td><td><input type="text" id="u" /></td></tr>
+        <tr><td>Password</td><td><input type="password" id="p" /></td></tr>
+        <tr><td colspan=2><center><input type="button" value="Login" id="l" /></center></td></tr>
+      </table>
+    </center>
+    <center class='main'>
+      <div class='left-menu admctrl'>
+        <ul class="menu">
+          <li>Home</li>
+          <li onclick="return xepOnline.Formatter.Format('title-bar',{render:'download'});">PDF</li>
+          <li id='ct' class='admctrl'>Create Teacher</li>
+          <li id='cs' class='admctrl'>Create Student</li>
+          <li id='cc' class='admctrl'>Create Class</li>
+          <li class='admctrl'>Manage Classes</li>
+          <li class='admctrl'>Manage Teachers</li>
+        </ul>
+      </div>
+      <img src="slide.png" height="36" width="36" id='showmenu' class='show admctrl'/>
+      <div class='main-page'>
+        <div class='menu-bar'>
+          <span class='teacher-name'>Teacher Name</span><br>
+        </div>
+        <div class='classes' id="clapp" align='left'>
+          <span class='void' align='left'>No classes assigned!</span>
+        </div>
+        <div id='report-cards' align='left'>
+
+        </div>
+      <center>
+    </div>
+    <div class='popup' id='student-add-edit'>
+      <table align='center'>
+        <tr><td>Name:</td><td><input type="text" id="3"/></td></tr>
+        <tr style="display:none" class='tbs admm'><td>Admission No:</td><td><input type="text" id="1"/></td></tr>
+        <tr style="display:none;"><td>Roll No:</td><td><input type="text" id="2"/></td></tr>
+        <tr><td>Father's Name:</td><td><input type="text" id="5"/></td></tr>
+        <tr><td>Mother's Name:</td><td><input type="text" id="6"/></td></tr>
+        <tr><td>Date of Birth:</td><td><input type="date" id="12"/></td></tr>
+        <tr><td>Class:</td><td><input type="text" id="10"/></td></tr>
+        <tr><td>Section:</td><td><input type="text" id="11"/></td></tr>
+        <tr style="display:none;" class='tbs ed'><td>Subjects:</td><td id="subappend">Enter a valid class first</td></tr>
+        <tr><td>Contact 1:</td><td><input type="text" id="7"/></td></tr>
+        <tr><td>Contact 2:</td><td><input type="text" id="8"/></td></tr>
+        <tr><td>Address:</td><td><textarea rows="4" cols="45" id="9"></textarea></td></tr>
+        <tr><td colspan="2"><center><button id="submit" data-mode='add'>Submit</button><button id="clear">Clear</button></center>
+                                                                                                                          </td></tr>
+      </table>
+    </div>
+    <div class='popup' id='desc-edit'>
+      <div id='dcontainer'>
+      </div>
+      <button id='submit-desc'>Submit</button>
+    </div>
+    <div class='popup' id='teacher-add-edit'>
+      <table align='center'>
+        <tr><td>Name</td><td><input type="text" id="ct1"/></td></tr>
+        <tr><td>Login</td><td><input type="text" id="ct2"/></td></tr>
+        <tr><td>Password</td><td><input type="text" id="ct3"/></td></tr>
+        <tr><td>Subject</td>
+          <td>
+            <select id='ct4'>
+              <option value="0">English</option>
+              <option value="1">Maths</option>
+              <option value="2">Science</option>
+              <option value="3">Social Studies</option>
+              <option value="4">History</option>
+              <option value="5">Civics</option>
+              <option value="6">Geography</option>
+              <option value="7">Economics</option>
+              <option value="8">Physics</option>
+              <option value="9">Chemistry</option>
+              <option value="10">Business Studies</option>
+              <option value="11">Accounts</option>
+              <option value="12">Hindi</option>
+              <option value="13">French</option>
+              <option value="14">German</option>
+              <option value="15">Kannada</option>
+              <option value="16">Physical Education</option>
+              <option value="17">Computer Science</option>
+              <option value="18">Biology</option>
+              <option value="19">EVS</option>
+            </select>
+          </td>
+        </tr>
+        <tr><td>Class Teacher*</td><td><input type='text' placeholder='ex: 5 B' id='ct5'/></td></tr>
+        <tr><td>Class(es)*</td><td id='multi-cont'><input type='text' id='multi' size='2'/></td></tr>
+        <tr><td colspan="2"><center><input type='button' value='Submit' id='create-teacher-but' /></center></td></tr>
+      </table>
+    </div>
+    <div class='popup' id='class-add-edit'>
+      <table align='center'>
+        <tr><td>Class</td><td><input type="text" id="cl1"/></td></tr>
+        <tr><td>Section</td><td><input type="text" id="cl2"/></td></tr>
+        <tr><td colspan="2"><center><input type='button' value='Submit' id='create-class-but' /></center></td></tr>
+      </table>
+    </div>
+    <script>window.$ = window.jQuery = require('./jquery.js');</script>
+    <script src="jquery.js"></script>
+    <script src="script.js"></script>
+    <script src="jui.js"></script>
+    <script src='pdfGen.js'></script>
+  </body>
+</html>
