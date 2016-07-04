@@ -1,7 +1,6 @@
 # School-Manager
 
-Note: Currently under development.
+Currently under development.
 
-A desktop application for CBSE school administrators and teachers to manage classes, students, marks and teachers.
-
-serverside/server.php - Login details must be filled in the respective variables.
+=> NOTE: serverside/server.php - Login details must be filled in the respective variables.
+=> TODO: SQL Table structures to be uploaded.
